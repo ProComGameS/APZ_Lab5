@@ -6,7 +6,7 @@ namespace FitnessClub.DAL.Models
     /// Фітнес клуб – містить дані про назву, локацію та список занять.
     /// </summary>
     public class Club
-    {
+    {   
         public int Id { get; set; }
         public string Name { get; set; }
         public string Location { get; set; }

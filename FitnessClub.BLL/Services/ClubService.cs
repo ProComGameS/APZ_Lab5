@@ -4,10 +4,11 @@ using FitnessClub.DAL;
 using FitnessClub.BLL.DTOs;
 using FitnessClub.DAL.Models;
 using AutoMapper;
+using FitnessClub.BLL.Interfaces;
 
 namespace FitnessClub.BLL.Services
 {
-    public class ClubService
+    public class ClubService : IClubService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
@@ -59,6 +60,54 @@ namespace FitnessClub.BLL.Services
             return true;
         }
 
+        
+        public bool BuyNetworkSubscription(int memberId)
+        {
+            var existingMembership = _unitOfWork.GetRepository<MembershipCard>()
+                .GetAll()
+                .FirstOrDefault(m => m.MemberId == memberId);
+
+            if (existingMembership != null)
+                return false;
+
+            var newMembership = new MembershipCard
+            {
+                MemberId = memberId,
+                CardType = CardType.NetworkSubscription
+            };
+
+            _unitOfWork.GetRepository<MembershipCard>().Insert(newMembership);
+            _unitOfWork.Complete();
+            return true;
+        }
+
+        
+        
+        public bool RegisterForSession(int sessionId, int memberId)
+        {
+            var session = _unitOfWork.GetRepository<ClassSession>().GetById(sessionId);
+            var member = _unitOfWork.GetRepository<Member>().GetById(memberId);
+
+            if (session == null || member == null)
+                return false;
+
+            if (session.Visits.Count >= session.Capacity)
+                return false;
+
+            Visit newVisit = new Visit
+            {
+                VisitDate = DateTime.Now,
+                ClassSessionId = sessionId,
+                MembershipCardId = member.MembershipCard.Id
+            };
+
+            _unitOfWork.GetRepository<Visit>().Insert(newVisit);
+            _unitOfWork.Complete();
+            return true;
+        }
+
+        
+        
         public bool BuySubscription(int clubId, int memberId, CardType cardType)
         {
             var existingMembership = _unitOfWork.GetRepository<MembershipCard>()

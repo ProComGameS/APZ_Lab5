@@ -3,10 +3,11 @@ using FitnessClub.DAL;
 using FitnessClub.DAL.Models;
 using FitnessClub.BLL.DTOs;
 using AutoMapper;
+using FitnessClub.BLL.Interfaces;
 
 namespace FitnessClub.BLL.Services
 {
-    public class MemberService
+    public class MemberService : IMemberService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
@@ -29,28 +30,32 @@ namespace FitnessClub.BLL.Services
             return _mapper.Map<MemberDTO>(member);
         }
 
-        public void CreateMember(MemberDTO memberDTO)
+        public bool CreateMember(MemberDTO memberDTO)
         {
             var member = _mapper.Map<Member>(memberDTO);
             _unitOfWork.GetRepository<Member>().Insert(member);
             _unitOfWork.Complete();
+            return true;
         }
 
-        public void UpdateMember(MemberDTO memberDTO)
+        public bool UpdateMember(MemberDTO memberDTO)
         {
             var member = _mapper.Map<Member>(memberDTO);
             _unitOfWork.GetRepository<Member>().Update(member);
             _unitOfWork.Complete();
+            return true;
         }
 
-        public void DeleteMember(int memberId)
+        public bool DeleteMember(int memberId)
         {
             var member = _unitOfWork.GetRepository<Member>().GetById(memberId);
             if (member != null)
             {
                 _unitOfWork.GetRepository<Member>().Delete(member);
                 _unitOfWork.Complete();
+                return true;
             }
+            return false;
         }
     }
 }

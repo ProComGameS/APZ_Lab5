@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1E+jlU9WAx8=",
+  "dgSpecHash": "tS9JWEtdwmg=",
   "success": true,
-  "projectFilePath": "/Users/oleksandrs/Documents/github_repos/FitnessClub_2/FitnessClub.DAL/FitnessClub.DAL.csproj",
+  "projectFilePath": "/Users/oleksandrs/Documents/github_repos/APZ_Lab5/FitnessClub.DAL/FitnessClub.DAL.csproj",
   "expectedPackageFiles": [
     "/Users/oleksandrs/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/oleksandrs/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

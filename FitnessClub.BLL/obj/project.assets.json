@@ -2,6 +2,39 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "Autofac/8.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "8.0.1"
+        },
+        "compile": {
+          "lib/net8.0/Autofac.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Autofac.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "8.1.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
+        },
+        "compile": {
+          "lib/net8.0/Autofac.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Autofac.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "AutoMapper/12.0.1": {
         "type": "package",
         "dependencies": {
@@ -585,6 +618,52 @@
     }
   },
   "libraries": {
+    "Autofac/8.1.0": {
+      "sha512": "O2QT+0DSTBR2Ojpacmcj3L0KrnnXTFrwLl/OW1lBUDiHhb89msHEHNhTA8AlK3jdFiAfMbAYyQaJVvRe6oSBcQ==",
+      "type": "package",
+      "path": "autofac/8.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "autofac.8.1.0.nupkg.sha512",
+        "autofac.nuspec",
+        "icon.png",
+        "lib/net6.0/Autofac.dll",
+        "lib/net6.0/Autofac.xml",
+        "lib/net7.0/Autofac.dll",
+        "lib/net7.0/Autofac.xml",
+        "lib/net8.0/Autofac.dll",
+        "lib/net8.0/Autofac.xml",
+        "lib/netstandard2.0/Autofac.dll",
+        "lib/netstandard2.0/Autofac.xml",
+        "lib/netstandard2.1/Autofac.dll",
+        "lib/netstandard2.1/Autofac.xml"
+      ]
+    },
+    "Autofac.Extensions.DependencyInjection/10.0.0": {
+      "sha512": "ZjR/onUlP7BzQ7VBBigQepWLAyAzi3VRGX3pP6sBqkPRiT61fsTZqbTpRUKxo30TMgbs1o3y6bpLbETix4SJog==",
+      "type": "package",
+      "path": "autofac.extensions.dependencyinjection/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "autofac.extensions.dependencyinjection.10.0.0.nupkg.sha512",
+        "autofac.extensions.dependencyinjection.nuspec",
+        "icon.png",
+        "lib/net6.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/net6.0/Autofac.Extensions.DependencyInjection.xml",
+        "lib/net7.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/net7.0/Autofac.Extensions.DependencyInjection.xml",
+        "lib/net8.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/net8.0/Autofac.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.xml"
+      ]
+    },
     "AutoMapper/12.0.1": {
       "sha512": "hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
       "type": "package",
@@ -1418,6 +1497,7 @@
     "net8.0": [
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "Autofac.Extensions.DependencyInjection >= 10.0.0",
       "FitnessClub.DAL >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.4"
     ]
@@ -1428,11 +1508,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/oleksandrs/Documents/github_repos/FitnessClub_2/FitnessClub.BLL/FitnessClub.BLL.csproj",
+      "projectUniqueName": "/Users/oleksandrs/Documents/github_repos/APZ_Lab5/FitnessClub.BLL/FitnessClub.BLL.csproj",
       "projectName": "FitnessClub.BLL",
-      "projectPath": "/Users/oleksandrs/Documents/github_repos/FitnessClub_2/FitnessClub.BLL/FitnessClub.BLL.csproj",
+      "projectPath": "/Users/oleksandrs/Documents/github_repos/APZ_Lab5/FitnessClub.BLL/FitnessClub.BLL.csproj",
       "packagesPath": "/Users/oleksandrs/.nuget/packages/",
-      "outputPath": "/Users/oleksandrs/Documents/github_repos/FitnessClub_2/FitnessClub.BLL/obj/",
+      "outputPath": "/Users/oleksandrs/Documents/github_repos/APZ_Lab5/FitnessClub.BLL/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/oleksandrs/.nuget/NuGet/NuGet.Config"
@@ -1447,8 +1527,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/oleksandrs/Documents/github_repos/FitnessClub_2/FitnessClub.DAL/FitnessClub.DAL.csproj": {
-              "projectPath": "/Users/oleksandrs/Documents/github_repos/FitnessClub_2/FitnessClub.DAL/FitnessClub.DAL.csproj"
+            "/Users/oleksandrs/Documents/github_repos/APZ_Lab5/FitnessClub.DAL/FitnessClub.DAL.csproj": {
+              "projectPath": "/Users/oleksandrs/Documents/github_repos/APZ_Lab5/FitnessClub.DAL/FitnessClub.DAL.csproj"
             }
           }
         }
@@ -1476,6 +1556,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[12.0.1, )"
+          },
+          "Autofac.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[10.0.0, )"
           },
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",

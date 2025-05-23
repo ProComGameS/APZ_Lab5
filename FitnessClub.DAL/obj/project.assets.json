@@ -3330,11 +3330,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/oleksandrs/Documents/github_repos/FitnessClub_2/FitnessClub.DAL/FitnessClub.DAL.csproj",
+      "projectUniqueName": "/Users/oleksandrs/Documents/github_repos/APZ_Lab5/FitnessClub.DAL/FitnessClub.DAL.csproj",
       "projectName": "FitnessClub.DAL",
-      "projectPath": "/Users/oleksandrs/Documents/github_repos/FitnessClub_2/FitnessClub.DAL/FitnessClub.DAL.csproj",
+      "projectPath": "/Users/oleksandrs/Documents/github_repos/APZ_Lab5/FitnessClub.DAL/FitnessClub.DAL.csproj",
       "packagesPath": "/Users/oleksandrs/.nuget/packages/",
-      "outputPath": "/Users/oleksandrs/Documents/github_repos/FitnessClub_2/FitnessClub.DAL/obj/",
+      "outputPath": "/Users/oleksandrs/Documents/github_repos/APZ_Lab5/FitnessClub.DAL/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/oleksandrs/.nuget/NuGet/NuGet.Config"

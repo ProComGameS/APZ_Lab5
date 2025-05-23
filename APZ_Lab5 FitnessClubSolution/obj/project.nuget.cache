@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "LmAQ8QyZB6A=",
+  "dgSpecHash": "BR4xfaoYd6k=",
   "success": true,
-  "projectFilePath": "/Users/oleksandrs/Documents/github_repos/FitnessClub_2/APZ_Lab5 FitnessClubSolution/APZ_Lab5 FitnessClubSolution.csproj",
+  "projectFilePath": "/Users/oleksandrs/Documents/github_repos/APZ_Lab5/APZ_Lab5 FitnessClubSolution/APZ_Lab5 FitnessClubSolution.csproj",
   "expectedPackageFiles": [
+    "/Users/oleksandrs/.nuget/packages/autofac/8.3.0/autofac.8.3.0.nupkg.sha512",
+    "/Users/oleksandrs/.nuget/packages/autofac.extensions.dependencyinjection/10.0.0/autofac.extensions.dependencyinjection.10.0.0.nupkg.sha512",
     "/Users/oleksandrs/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/oleksandrs/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/oleksandrs/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
